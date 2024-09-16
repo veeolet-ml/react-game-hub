@@ -11,8 +11,6 @@ import GameHeading from "./components/GameHeading";
 import { GameQuery, GameQueryProvider } from "./contexts/GameQueryContext";
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
   return (
     <GameQueryProvider>
       <Grid
@@ -35,7 +33,7 @@ function App() {
         </Show>
         <GridItem area="main">
           <Box paddingLeft={2}>
-            <GameHeading gameQuery={gameQuery} />
+            <GameHeading />
             <Flex marginBottom={5}>
               <Box marginRight={5}>
                 <PlatformSelector />
